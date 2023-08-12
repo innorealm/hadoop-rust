@@ -3,6 +3,7 @@ use crate::{
     conf::Configuration,
     fs::common_configuration_keys::{FS_PERMISSIONS_UMASK_DEFAULT, FS_PERMISSIONS_UMASK_KEY},
 };
+use hadoop_proto::hadoop::hdfs::FsPermissionProto;
 use once_cell::sync::Lazy;
 
 const UMASK_LABEL: &str = FS_PERMISSIONS_UMASK_KEY;
@@ -104,6 +105,14 @@ impl From<i16> for FsPermission {
             groupaction: g,
             otheraction: o,
             sticky_bit: sb,
+        }
+    }
+}
+
+impl Into<FsPermissionProto> for &FsPermission {
+    fn into(self) -> FsPermissionProto {
+        FsPermissionProto {
+            perm: self.to_short() as u32,
         }
     }
 }

@@ -1,6 +1,7 @@
 use super::{ClientNamenodeProtocolPB, PBHelperClient};
-use crate::{hdfs::protocol::ClientProtocol, proto::hadoop::hdfs::*};
+use crate::hdfs::protocol::ClientProtocol;
 use hadoop_common::fs::permission::FsCreateModes;
+use hadoop_proto::hadoop::hdfs::*;
 
 /// This class forwards NN's ClientProtocol calls as RPC calls to the NN server
 /// while translating from the parameter types used in ClientProtocol to the

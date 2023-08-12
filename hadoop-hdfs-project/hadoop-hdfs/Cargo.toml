@@ -1,15 +1,15 @@
 [package]
 name = "hadoop-hdfs"
-version = { workspace = true }
-authors = { workspace = true }
-edition = { workspace = true }
-description = { workspace = true }
-repository = { workspace = true }
-license = { workspace = true }
+version.workspace = true
+authors.workspace = true
+edition.workspace = true
+description.workspace = true
+repository.workspace = true
+license.workspace = true
 
 [dependencies]
-anyhow = { workspace = true }
-clap = { workspace = true }
-hadoop-common = { workspace = true }
-hadoop-hdfs-client = { workspace = true }
-iref = { workspace = true }
+anyhow.workspace = true
+clap.workspace = true
+hadoop-common.workspace = true
+hadoop-hdfs-client.workspace = true
+iref.workspace = true

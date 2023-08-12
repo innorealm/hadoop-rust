@@ -225,21 +225,21 @@ dependencies = [
 
 [[package]]
 name = "hadoop-common"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "anyhow",
  "atomic",
+ "hadoop-proto",
  "iref",
  "once_cell",
  "prost",
- "prost-build",
  "uuid",
  "whoami",
 ]
 
 [[package]]
 name = "hadoop-hdfs"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "anyhow",
  "clap",
@@ -250,13 +250,20 @@ dependencies = [
 
 [[package]]
 name = "hadoop-hdfs-client"
-version = "0.0.1"
+version = "0.0.2"
 dependencies = [
  "anyhow",
  "atomic",
  "hadoop-common",
+ "hadoop-proto",
  "iref",
  "once_cell",
+]
+
+[[package]]
+name = "hadoop-proto"
+version = "0.0.2"
+dependencies = [
  "prost",
  "prost-build",
 ]

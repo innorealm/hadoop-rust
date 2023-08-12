@@ -1,10 +1,10 @@
 use crate::{
     ipc::{client_id::BYTE_LENGTH, AlignmentContext, RpcKind},
-    proto::hadoop::common::{
-        rpc_request_header_proto::OperationProto, IpcConnectionContextProto, RpcKindProto,
-        RpcRequestHeaderProto, UserInformationProto,
-    },
     security::UserGroupInformation,
+};
+use hadoop_proto::hadoop::common::{
+    rpc_request_header_proto::OperationProto, IpcConnectionContextProto, RpcKindProto,
+    RpcRequestHeaderProto, UserInformationProto,
 };
 use std::rc::Rc;
 

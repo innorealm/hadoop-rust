@@ -3,10 +3,10 @@ use crate::{
     fs::common_configuration_keys::IPC_MAXIMUM_RESPONSE_LENGTH_DEFAULT,
     io::retry::RetryPolicy,
     ipc::{server::AuthProtocol, RpcConstants, RpcKind, RpcProtocol, RPC},
-    proto::hadoop::common::rpc_request_header_proto::OperationProto,
     util::ProtoUtil,
 };
 use atomic::Atomic;
+use hadoop_proto::hadoop::common::rpc_request_header_proto::OperationProto;
 use prost::Message;
 use std::{
     collections::HashMap,

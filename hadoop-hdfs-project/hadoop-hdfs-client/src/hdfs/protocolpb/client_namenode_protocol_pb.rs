@@ -1,6 +1,6 @@
 use crate::hdfs::protocol::hdfs_constants::CLIENT_NAMENODE_PROTOCOL_NAME;
-use crate::proto::hadoop::hdfs::*;
 use hadoop_common::ipc::{Invoker, ProtocolInfo, RpcProtocol};
+use hadoop_proto::hadoop::hdfs::*;
 
 /// Protocol that clients use to communicate with the NameNode.
 pub(crate) struct ClientNamenodeProtocolPB {

@@ -1,15 +1,12 @@
 use super::{AlignmentContext, Client, ConnectionId, RpcEngine, RpcProtocol, RPC};
 use crate::{
-    conf::Configuration,
-    io::retry::RetryPolicy,
-    ipc::RpcKind,
-    proto::hadoop::common::{
-        rpc_response_header_proto::RpcStatusProto, RequestHeaderProto, RpcResponseHeaderProto,
-    },
-    security::UserGroupInformation,
+    conf::Configuration, io::retry::RetryPolicy, ipc::RpcKind, security::UserGroupInformation,
 };
 use anyhow::Error;
 use atomic::Atomic;
+use hadoop_proto::hadoop::common::{
+    rpc_response_header_proto::RpcStatusProto, RequestHeaderProto, RpcResponseHeaderProto,
+};
 use prost::Message;
 use std::{marker::PhantomData, net::SocketAddr, rc::Rc, sync::Arc};
 

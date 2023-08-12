@@ -1,5 +1,5 @@
 [package]
-name = "hadoop-common"
+name = "hadoop-proto"
 version.workspace = true
 authors.workspace = true
 edition.workspace = true
@@ -8,11 +8,7 @@ repository.workspace = true
 license.workspace = true
 
 [dependencies]
-anyhow.workspace = true
-atomic.workspace = true
-iref.workspace = true
-hadoop-proto.workspace = true
-once_cell.workspace = true
 prost.workspace = true
-uuid.workspace = true
-whoami.workspace = true
+
+[build-dependencies]
+prost-build.workspace = true
