@@ -1,0 +1,19 @@
+[package]
+name = "hadoop-hdfs-client"
+version = { workspace = true }
+authors = { workspace = true }
+edition = { workspace = true }
+description = { workspace = true }
+repository = { workspace = true }
+license = { workspace = true }
+
+[dependencies]
+anyhow = { workspace = true }
+atomic = { workspace = true }
+hadoop-common = { workspace = true }
+iref = { workspace = true }
+once_cell = { workspace = true }
+prost = { workspace = true }
+
+[build-dependencies]
+prost-build = { workspace = true }
